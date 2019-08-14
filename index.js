@@ -3,6 +3,11 @@
 module.exports = {
   extends: 'tslint:latest',
   rules: {
-    'max-line-length': [true, 140]
+    'interface-name': [true, 'never-prefix'],
+    'max-line-length': [true, 140],
+    'trailing-comma': [true, {
+      multiline: 'always',
+      singleline: 'never'
+    }]
   }
 };
