@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  extends: 'tslint:latest',
+  extends: 'tslint:recommended',
   rules: {
     'interface-name': [true, 'never-prefix'],
     'max-line-length': [true, 140],
