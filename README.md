@@ -1,4 +1,8 @@
-<h1 align="center">TSLint Config</h1>
+<h1>
+  TSLint Config
+
+  <img align="right" src="https://cdn.jsdelivr.net/gh/Emphori/.github@master/assets/project-icon-green.png" />
+</h1>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@emphori/tslint-config">
