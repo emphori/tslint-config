@@ -3,11 +3,26 @@ language: node_js
 node_js:
   - "lts/*"
 
+before_deploy:
+  - "echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc"
+  - "echo '//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}' > .npmrc"
+
 deploy:
-  provider: npm
-  skip_cleanup: true
-  email: $NPM_EMAIL
-  api_key: $NPM_AUTH_TOKEN
-  on:
-    branch: master
-    tags: true
+  # Publish to https://registry.npmjs.org/
+  - provider: script
+    script: "npm publish --registry=https://registry.npmjs.org/"
+    skip_cleanup: true
+    on:
+      branch: master
+      tags: true
+
+  # Publish to https://npm.pkg.github.com/
+  - provider: script
+    script: "npm publish --registry=https://npm.pkg.github.com/"
+    skip_cleanup: true
+    on:
+      branch: master
+      tags: true
+
+env:
+  - secure: CFzxt8amMRPPDAFTeHeFqADMqPg5SRZ4Xvmye5Pd+36SQJ+z2mBKfoQOC6KFiUdPySEXTlmhuspTLOiv1ZC6OZBiSSWA8AxAvYyVrowcDC26JklAhaHjszosobwmV97w9q8Mym6en6+Q7uiIxH7HlQ5KGLxqLSN4LVBihxG3i/LrT1gXTALcRGg5GK+NTh2JOIJK9s9MtojeOJvlfkzb0AvYU2TvO+W8/tHPfkQIrk0cUchnw3tg57ZHRfS12Fotc8Vsr+eTJy07vbT093wQ/WsLv5vD/55ukH0lF9jUsI9tD8uVJZYsp3Fmj7cNLP3q/kI2ODpruRscrJHBAmgaX/d71sT4Mqj5cTvStzr2tfcAoWnuN+IwX34ii46UtrzON8KMbwEG4jNhxhKNM5xOYnuezyiKBPPkyrBg9Egqy3Hq5FHlqFA9ZrkWtnBVxmVEqOkxkiczHotEcax9jFhBPcpaxF3Rp1W/isD9uqfWEclf9YD6ZtIFSwO0lUmOJTU38B9kNXw7VCf3FazrMY1L945z28Q8lX6oZYyz+PxTWUAXOjSA/lthueJKWsXChks1YNDYKO/QcGdjIh37PvxH0LTksfTGQBxlb19YmSuSLtis5BIHFw5cwGXJsajJtZfrAF4CYU5f5xITD8GqUydhq8T1XK8/nGLK7zF8vZPnfDo=
