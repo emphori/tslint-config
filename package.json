@@ -28,7 +28,7 @@
     "tslint": "^5.18.0"
   },
   "devDependencies": {
-    "@emphori/eslint-config": "^0.1.4",
+    "@emphori/eslint-config": "^0.1.7",
     "eslint": "^6.5.1"
   },
   "publishConfig": {
