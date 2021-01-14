@@ -7,7 +7,7 @@ module.exports = {
     'max-line-length': [true, 140],
     'trailing-comma': [true, {
       multiline: 'always',
-      singleline: 'never'
-    }]
-  }
+      singleline: 'never',
+    }],
+  },
 };
