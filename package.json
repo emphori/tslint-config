@@ -1,9 +1,7 @@
 {
   "name": "@emphori/tslint-config",
-  "version": "0.0.4",
   "description": "Shareable TSLint TypeScript styleguide from Emphori",
   "keywords": [
-    "emphori",
     "code",
     "codestyle",
     "style",
@@ -12,10 +10,10 @@
     "linter",
     "tslint"
   ],
-  "author": "Emphori (https://emphori.studio)",
-  "homepage": "https://github.com/Emphori/tslint-config#readme",
+  "author": "Emphori (https://emphori.co)",
+  "homepage": "https://github.com/emphori/tslint-config#readme",
   "contributors": [
-    "Iain Reid <iainreid382@gmail.com> (https://chaff.land)"
+    "Iain Reid <iainreid382@gmail.com> (https://iainjreid.com)"
   ],
   "license": "MIT",
   "scripts": {
@@ -36,9 +34,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Emphori/tslint-config.git"
+    "url": "git+https://github.com/emphori/tslint-config.git"
   },
   "bugs": {
-    "url": "https://github.com/Emphori/tslint-config/issues"
+    "url": "https://github.com/emphori/tslint-config/issues"
   }
 }
