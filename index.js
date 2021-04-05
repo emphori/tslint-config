@@ -5,6 +5,7 @@ module.exports = {
   rules: {
     'interface-name': [true, 'never-prefix'],
     'max-line-length': [true, 140],
+    'quotemark': [true, 'single', 'jsx-double'],
     'trailing-comma': [true, {
       multiline: 'always',
       singleline: 'never',
